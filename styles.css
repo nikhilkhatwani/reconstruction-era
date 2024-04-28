@@ -1,0 +1,370 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  --primary-color: #f3dfc1;
+  --secondary-color: #5e4623;
+  --tertiary-color: #bdae98;
+  /* font-family: "Times New Roman", Times, serif; */
+}
+
+body {
+  background-color: var(--primary-color);
+  padding: 30px 40px;
+}
+
+.nav {
+  padding-bottom: 20px;
+}
+
+.nav-title-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.citations {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #b0824a43;
+  border: 1px solid #89591d;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+
+.citation,
+.citation a {
+  color: #89591d;
+}
+
+.nav-title {
+  color: var(--secondary-color);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2em;
+}
+
+.nav-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-subtitle {
+  font-size: 1em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--secondary-color);
+}
+
+.citations-btn {
+  background-color: var(--secondary-color);
+  padding: 5px 10px;
+  color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.nav-tab {
+  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--tertiary-color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-tab:hover {
+  color: #ad7b61;
+  transition: 0.2s ease-in-out;
+}
+
+.selected {
+  color: #ad8b61 !important;
+  /* font-weight: bold  ; */
+  transition: 0.2s ease-in-out;
+}
+
+.freedmen,
+.civil,
+.sharecropping,
+.reconstruction,
+.jim {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0px 15px; */
+  /* background-color: red; */
+  /* overflow-y: scroll; */
+  /* height: 80vh; */
+}
+
+.sect {
+  display: flex;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  /* padding: 10px; */
+  background-color: #e0c9a6;
+  align-items: center;
+  /* overflow-y: scroll; */
+  height: 20vh;
+  /* overflow-y: scroll; */
+}
+
+.sect img {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid var(--secondary-color);
+}
+
+.sect-content {
+  width: 80%;
+  padding: 0px 20px;
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sect-title {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.sect-description {
+  /* /* background-color: red; */
+  /* width: 78%;
+  padding: 30px; */
+}
+
+.row-sect {
+  display: flex;
+  /* background-color: blue; */
+  margin-top: 30px;
+  gap: 50px;
+}
+
+.spc {
+  /* width: 55% !important; */
+}
+
+.spc-1 {
+  width: 40% !important;
+}
+
+.spc-2 {
+  width: 60% !important;
+}
+
+.spc-3 {
+  width: 100% !important;
+}
+
+.spc-4 {
+  width: 30% !important;
+}
+
+.spc-5 {
+  width: 40% !important;
+}
+
+.sect-col {
+  display: flex;
+  text-align: center;
+  width: 50%;
+  /* background-color: red; */
+  flex-direction: column;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  background-color: #e0c9a6;
+  align-items: center;
+}
+
+.sect-col img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.sect-col-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sect-col-description {
+  /* background-color: orange; */
+  /* padding: 10px; */
+}
+
+.section {
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+/* NO SELECT */
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media screen and (max-width: 1140px) {
+  .nav-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .sect {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sect img {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+    border-right: none;
+    border-bottom: 1px solid var(--secondary-color);
+  }
+
+  .sect-content {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .spc-row {
+    flex-direction: column;
+    gap: 30px !important;
+  }
+
+  .spc-4,
+  .spc-5 {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .row-sect {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .sect-col {
+    width: 100% !important;
+  }
+
+  .citation {
+    font-size: 0.9em;
+  }
+
+  .citation a {
+    font-size: 0.9em;
+    /* wrap */
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-tabs {
+    align-items: center;
+  }
+
+  .nav-title-cont {
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-subtitle {
+    display: none;
+  }
+
+  .hidden {
+    display: block;
+  }
+
+  .spc-nav {
+    text-align: center;
+  }
+
+  .spc-nav .nav-right {
+    margin-top: 5px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .nav-title {
+    font-size: 1.7em;
+  }
+
+  .nav-subtitle {
+    font-size: 0.8em;
+  }
+
+  .nav {
+    padding-bottom: 30px;
+  }
+
+  .citations-btn {
+    padding: 5px 8px;
+    font-size: 0.8em;
+  }
+
+  .nav-tab {
+    font-size: 0.8em;
+  }
+
+  .sect-title {
+    font-size: 1.2em;
+  }
+
+  .sect-description {
+    font-size: 0.8em;
+  }
+
+  .sect-col-content {
+    font-size: 0.8em;
+  }
+
+  .citation {
+    font-size: 0.8em;
+  }
+}
